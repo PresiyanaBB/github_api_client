@@ -25,7 +25,8 @@ func GetBodyFromUrl(url string) ([]byte, error) {
 	}
 	req.Header.Add("Accept", "Accept: application/json")
 	//token was needed in order to make more than 60 GET requests per hour
-	req.Header.Add("Authorization", "Bearer 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")
+	//in the placeholder <insert_token> place your token generated from github->settings->dev
+	//req.Header.Add("Authorization", "Bearer <insert_token>")
 	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		return nil, err
